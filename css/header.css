@@ -1,0 +1,227 @@
+header {
+    display: flex;
+    height: 55px;
+    justify-content: space-between;
+    position: fixed;
+    background-color: rgb(255,255,255);
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 10;
+}
+
+.left-section {
+    display: flex;
+    align-items: center;
+}
+
+.middle-section {
+    flex: 1;
+    max-width: 670px;
+    margin-left: 70px;
+    margin-right: 30px;
+    display: flex;
+    align-items: center;
+}
+
+.right-section {
+    width: 200px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-right: 22px;
+}
+
+.hamburger-menu {
+    height: 27px;
+    margin-left: 24px;
+    margin-right: 24px;
+}
+
+.youtube-logo {
+    width: 90px;
+}
+
+.search-button {
+    width: 60px;
+    height: 40px;
+    margin-left: -1px;
+    background-color: rgb(245 243 243);
+    border: 1px solid rgb(192, 188, 188);
+    margin-right: 10px;
+    z-index: 6;
+    border-end-end-radius: 18px;
+    cursor: pointer;
+    border-start-end-radius: 18px;
+}
+
+.voice-search-button {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    border: none;
+    background-color: #f7f4f4;
+}
+
+.voice-search-button,
+.search-button,
+.upload-icon-container,
+.apps-icon-container,
+.notifications-icon-container {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+
+.search-bar {
+    height: 36px;
+    flex: 1;
+    border-radius: 1px;
+    border: 1px solid rgb(192, 188, 188);
+    padding-left: 17px;
+    font-size: 16px;
+    width: 0;
+    z-index: 8;
+    border-start-start-radius: 18px;
+    border-end-start-radius: 18px;
+    transition: margin-left 0.15s;
+}
+
+.search-bar::placeholder {
+    font-size: 15.5px;
+}
+
+.search-bar:focus {
+    border: none;
+    outline-style: solid;
+    outline-color: rgb(67, 67, 238);
+    outline-width: 0.5px;
+    margin-left: -20px;
+}
+
+.search-icon {
+    width: 24px;
+}
+
+.search-icon {
+    width: 24px;
+}
+
+.header-icon{
+    height: 24px;
+    transition: height 0.15s;
+}
+
+.header-icon:hover{
+    height: 28px;
+}
+
+.user-profile {
+    height: 34px;
+    margin-top: 5px;
+    border-radius: 16px;
+    width: 34px;
+    object-fit: cover;
+    cursor: pointer;
+}
+
+.notifications-count {
+    position: absolute;
+    top: 0px;
+    right: -4px;
+    background-color: #d30f0f;
+    padding: 1px 5px 1px 5px;
+    color: white;
+    border-radius: 50%;
+    font-size: 11px;
+}
+
+.tool-tip {
+    background-color: rgb(124, 117, 117);
+    position: absolute;
+    border-radius: 4px;
+    color: white;
+    padding: 8px;
+    bottom: -46px;
+    opacity: 0;
+    transition: opacity 0.15s;
+    pointer-events: none;
+    white-space: nowrap;
+    font-size: 12px;
+}
+.user-tool-tip{
+    background-color: rgb(124, 117, 117);
+    position: absolute;
+    border-radius: 4px;
+    color: white;
+    padding: 8px;
+    bottom: -32px;
+    right: 10px;
+    opacity: 0;
+    transition: opacity 0.15s;
+    pointer-events: none;
+    white-space: nowrap;
+    font-size: 12px;
+}
+.search-button:hover .tool-tip,
+.voice-search-button:hover .tool-tip,
+.upload-icon-container:hover .tool-tip,
+.apps-icon-container:hover .tool-tip,
+.notifications-icon-container:hover .tool-tip,
+.user-profile-container:hover .user-tool-tip{
+    opacity: 1;
+}
+
+@media (max-width: 700px) {
+    .search-bar{
+        display: none;
+    }
+    .search-button{
+        margin-right: 30px;
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+        border: none;
+        background-color: white;
+    }
+    .voice-search-button{
+        background-color: white;
+    }
+}
+@media (max-width: 600px) {
+    .youtube-logo{
+        width: 60px;
+    }
+    .search-button{
+        margin-right: 10px;
+        margin-left: 0px;
+        width: 40px;
+        height: 40px;
+    }
+    .middle-section{
+        margin-left: 20px;
+        margin-right: 0;
+    }
+}
+@media (max-width: 500px) {
+    .youtube-logo{
+        width: 60px;
+    }
+    .search-button{
+        margin-right: 5px;
+        margin-left: 0px;
+        width: 40px;
+        height: 40px;
+    }
+    .middle-section{
+        margin-left: 5px;
+        margin-right: 5px;
+    }
+    .hamburger-menu {
+        height: 27px;
+        margin-left: 5px;
+        margin-right: 10px;
+    }
+}
